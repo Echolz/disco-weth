@@ -1,0 +1,22 @@
+{
+  "name": "disco-weth",
+  "version": "1.0.0",
+  "description": "Discord chat bot for the weather",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Echolz/disco-weth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Echolz/disco-weth/issues"
+  },
+  "homepage": "https://github.com/Echolz/disco-weth#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
