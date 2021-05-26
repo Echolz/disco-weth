@@ -29,7 +29,7 @@ const exampleEmbed = (
     return new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setAuthor(`Hello, ${author}`, profile)
-        .setTitle(`There is ${temp}\u00B0 C in ${cityName}, ${country}`)
+        .setTitle(`It is ${temp}\u00B0 C in ${cityName}, ${country}`)
         .addField(`Maximum Temperature:`, `${maxTemp}\u00B0 C`, true)
         .addField(`Minimum Temperature:`, `${minTemp}\u00B0 C`, true)
         .addField(`Humidity:`, `${humidity} %`, true)
@@ -56,7 +56,7 @@ const errorEmbed = () =>
 client.on('message', message => {
         if (!message.content.startsWith(prefix)) return;
 
-        const args = message.content.slice(prefix.length).split(' ');
+        const args = message.embeds[0].title.slice(prefix.length).split(' ');
 
         if (args.length <= 1) {
             message.channel.send(errorEmbed());
